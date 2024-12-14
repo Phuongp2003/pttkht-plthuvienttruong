@@ -13,12 +13,12 @@
 					Sách
 				</RouterLink>
 				<RouterLink
-					to="/library"
+					to="/books"
 					class="text-gray-700 hover:text-blue-500">
 					Quán lý sách mượn
 				</RouterLink>
 				<RouterLink
-					to="/library"
+					to="/books"
 					class="text-gray-700 hover:text-blue-500">
 					Quán lý thẻ sinh viên
 				</RouterLink>
