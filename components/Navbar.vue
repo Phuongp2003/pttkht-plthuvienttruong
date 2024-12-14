@@ -113,7 +113,7 @@
 <script>
 	import { useCookies } from '@vueuse/integrations/useCookies';
 	import { useStorage } from '@vueuse/core';
-	import Logo from './Logo.vue';
+	import Logo from '~/components/Logo.vue';
 
 	export default {
 		components: {
