@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "title": "Book Title 1",
+        "author": "Author 1",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 1",
+        "link": "/book/1",
+        "summary": "Summary of Book Title 1",
+        "amount": 10,
+        "available": 7
+    },
+    {
+        "id": 2,
+        "title": "Book Title 2",
+        "author": "Author 2",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 2",
+        "link": "/book/2",
+        "summary": "Summary of Book Title 2",
+        "amount": 8,
+        "available": 5
+    },
+    {
+        "id": 3,
+        "title": "Book Title 3",
+        "author": "Author 3",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 3",
+        "link": "/book/3",
+        "summary": "Summary of Book Title 3",
+        "amount": 12,
+        "available": 10
+    },
+    {
+        "id": 4,
+        "title": "Book Title 4",
+        "author": "Author 4",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 4",
+        "link": "/book/4",
+        "summary": "Summary of Book Title 4",
+        "amount": 15,
+        "available": 12
+    },
+    {
+        "id": 5,
+        "title": "Book Title 5",
+        "author": "Author 5",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 5",
+        "link": "/book/5",
+        "summary": "Summary of Book Title 5",
+        "amount": 7,
+        "available": 3
+    },
+    {
+        "id": 6,
+        "title": "Book Title 6",
+        "author": "Author 6",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 6",
+        "link": "/book/6",
+        "summary": "Summary of Book Title 6",
+        "amount": 9,
+        "available": 6
+    },
+    {
+        "id": 7,
+        "title": "Book Title 7",
+        "author": "Author 7",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 7",
+        "link": "/book/7",
+        "summary": "Summary of Book Title 7",
+        "amount": 11,
+        "available": 9
+    },
+    {
+        "id": 8,
+        "title": "Book Title 8",
+        "author": "Author 8",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 8",
+        "link": "/book/8",
+        "summary": "Summary of Book Title 8",
+        "amount": 13,
+        "available": 11
+    },
+    {
+        "id": 9,
+        "title": "Book Title 9",
+        "author": "Author 9",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 9",
+        "link": "/book/9",
+        "summary": "Summary of Book Title 9",
+        "amount": 14,
+        "available": 10
+    },
+    {
+        "id": 10,
+        "title": "Book Title 10",
+        "author": "Author 10",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 10",
+        "link": "/book/10",
+        "summary": "Summary of Book Title 10",
+        "amount": 10,
+        "available": 8
+    }
+]
