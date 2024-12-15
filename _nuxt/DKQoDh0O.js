@@ -1,0 +1,1 @@
+import{B as s,P as c,C as a}from"./D7uBgG0D.js";import{k as p,A as o,e as _,i as e,c as f}from"./DQ-OUx2J.js";const m={components:{Banner:s,PreferBook:c,Coop:a},layout:"default"};function l(d,i,u,k,B,b){const n=o("banner"),t=o("prefer-book"),r=o("coop");return f(),_("div",null,[e(n),e(t),e(r)])}const C=p(m,[["render",l]]);export{C as default};
