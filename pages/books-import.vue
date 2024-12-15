@@ -32,16 +32,14 @@
 					pending: loading,
 					error,
 				} = await useAsyncData('books', () =>
-					fetch('/data/bookS.json').then((res) =>
-						res.json()
-					)
+					fetch('/data/bookS.json').then((res) => res.json())
 				);
 				this.loading = loading;
 				this.books = bookData;
+				this.filteredBooks = this.books;
 			} catch (error) {
 				console.error('Error fetching top books:', error);
 			}
-			this.filteredBooks = this.books;
 		},
 		methods: {
 			applyFilter(filter) {

@@ -9,7 +9,7 @@
 			<div
 				class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2 lg:grid-cols-3">
 				<div
-					v-for="(books, publisher) in booksByPublisher"
+					v-for="(books, publisher) in books"
 					:key="publisher"
 					class="p-4 bg-white rounded shadow cursor-pointer hover:bg-gray-100"
 					@click="selectPublisher(publisher)">
@@ -31,7 +31,7 @@
 				<h3 class="text-lg font-semibold">Thông tin Nhà Xuất Bản</h3>
 				<p class="text-gray-700">
 					Số sách:
-					{{ booksByPublisher[selectedPublisher].length }}
+					{{ books[selectedPublisher].length }}
 				</p>
 				<button
 					@click="addAllBooksToWarehouse"
@@ -42,7 +42,7 @@
 			<div
 				class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2 lg:grid-cols-5">
 				<NuxtLink
-					v-for="book in booksByPublisher[selectedPublisher]"
+					v-for="book in books[selectedPublisher]"
 					:key="book.id"
 					:to="`${book.link}/edit`"
 					class="relative p-4 bg-white rounded shadow book-card">
@@ -67,7 +67,7 @@
 <script>
 	export default {
 		props: {
-			booksByPublisher: { type: Array, required: true },
+			books: { type: Array, required: true },
 		},
 		data() {
 			return {
@@ -84,11 +84,8 @@
 				this.selectedPublisher = null;
 			},
 			addAllBooksToWarehouse() {
-				this.$emit(
-					'add-all-books',
-					this.booksByPublisher[this.selectedPublisher]
-				);
-				this.$delete(this.booksByPublisher, this.selectedPublisher);
+				this.$emit('add-all-books', this.books[this.selectedPublisher]);
+				this.$delete(this.books, this.selectedPublisher);
 				this.selectedPublisher = null;
 			},
 		},
