@@ -1,12 +1,15 @@
 <template>
 	<div>
 		<h2 class="my-6 text-2xl font-bold text-center">Tìm sách</h2>
-		<BookSearch @filter="applyFilter" />
-		<div class="container mx-auto mt-6">
-			<UserBorrowInfo
-				v-for="user in filteredUsers"
-				:key="user.id"
-				:user="user" />
+		<LoadingTransition v-if="loading" />
+		<div v-else>
+			<BookSearch @filter="applyFilter" />
+			<div class="container mx-auto mt-6">
+				<UserBorrowInfo
+					v-for="user in filteredUsers"
+					:key="user.id"
+					:user="user" />
+			</div>
 		</div>
 	</div>
 </template>
@@ -26,16 +29,26 @@
 				users: null,
 				filteredBooks: [],
 				filteredUsers: [],
+				loading: false,
 			};
 		},
 		async created() {
 			try {
-				const { data: bookData } = await useAsyncData('books', () =>
+				const {
+					data: bookData,
+					pending: loading,
+					error,
+				} = await useAsyncData('books', () =>
 					fetch('/data/book.json').then((res) => res.json())
 				);
-				const { data: userData } = await useAsyncData('users', () =>
+				const {
+					data: userData,
+					pending: loading2,
+					error2,
+				} = await useAsyncData('users', () =>
 					fetch('/data/users.json').then((res) => res.json())
 				);
+				this.loading = loading || loading2;
 				this.books = bookData;
 				this.users = userData;
 

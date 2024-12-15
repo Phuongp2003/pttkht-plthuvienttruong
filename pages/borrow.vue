@@ -1,6 +1,8 @@
 <template>
 	<div>
 		<h2 class="my-6 text-2xl font-bold text-center">Xác nhận sách mượn</h2>
+		<LoadingTransition v-if="loading" />
+		<div v-else></div>
 		<BookListBC
 			:books="filteredBooks"
 			@confirmBorrow="handleConfirmBorrow" />
@@ -18,15 +20,21 @@
 			return {
 				books: null,
 				filteredBooks: [],
+				loading: false,
 			};
 		},
 		async created() {
 			try {
-				const { data: bookData } = await useAsyncData('books', () =>
+				const {
+					data: bookData,
+					pending: loading,
+					error,
+				} = await useAsyncData('books', () =>
 					fetch('http://localhost:3000/data/bookUB.json').then(
 						(res) => res.json()
 					)
 				);
+				this.loading = loading;
 				this.books = bookData;
 			} catch (error) {
 				console.error('Error fetching top books:', error);

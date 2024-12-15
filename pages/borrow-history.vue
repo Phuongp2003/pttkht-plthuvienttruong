@@ -1,8 +1,11 @@
 <template>
 	<div>
 		<h2 class="my-6 text-2xl font-bold text-center">Lịch sử mượn sách</h2>
-		<BookSearch @filter="applyFilter" />
-		<BookListBH :books="filteredBooks" />
+		<LoadingTransition v-if="loading" />
+		<div v-else>
+			<BookSearch @filter="applyFilter" />
+			<BookListBH :books="filteredBooks" />
+		</div>
 	</div>
 </template>
 
@@ -19,15 +22,21 @@
 			return {
 				books: null,
 				filteredBooks: [],
+				loading: false,
 			};
 		},
 		async created() {
 			try {
-				const { data: bookData } = await useAsyncData('books', () =>
+				const {
+					data: bookData,
+					pending: loading,
+					error,
+				} = await useAsyncData('books', () =>
 					fetch('http://localhost:3000/data/bookUBH.json').then(
 						(res) => res.json()
 					)
 				);
+				this.loading = loading;
 				this.books = bookData;
 			} catch (error) {
 				console.error('Error fetching top books:', error);
