@@ -48,7 +48,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="mt-4">
+			<div class="mt-4 c-button">
 				<button
 					@click="confirmAllReturned"
 					class="p-2 text-white bg-blue-500 rounded">
@@ -114,5 +114,8 @@
 	}
 	.cursor-pointer {
 		cursor: pointer;
+	}
+	.bg-green-500 .c-button {
+		display: none;
 	}
 </style>

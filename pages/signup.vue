@@ -39,15 +39,14 @@
 				<div class="form-group">
 					<label
 						class="block mb-2 text-black"
-						for="nickname"
-						>Biệt danh (sẽ sử dụng để hiển thị trong trận
-						đấu)</label
+						for="telephone"
+						>Số điện thoại</label
 					>
 					<input
-						type="text"
+						type="telephone"
 						class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none form-control focus:bg-gray-300"
-						id="nickname"
-						v-model="nickname"
+						id="telephone"
+						v-model="telephone"
 						required />
 				</div>
 				<div class="form-group">
@@ -161,7 +160,7 @@
 			return {
 				lastname: '',
 				firstname: '',
-				nickname: '',
+				telephone: '',
 				email: '',
 				username: '',
 				password: '',
@@ -211,7 +210,7 @@
 				const signupInfo = {
 					lastName: this.lastname,
 					firstName: this.firstname,
-					nickname: this.nickname,
+					telephone: this.telephone,
 					email: this.email,
 					username: this.username,
 					password: this.password,

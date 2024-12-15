@@ -8,7 +8,7 @@
 			<NuxtLink
 				v-for="book in paginatedBooks"
 				:key="book.id"
-				:to="`/edit${book.link}`"
+				:to="`/book/edit/${book.id}`"
 				class="relative p-4 bg-white rounded shadow book-card">
 				<img
 					:src="book.cover"

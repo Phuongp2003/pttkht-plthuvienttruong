@@ -4,7 +4,7 @@
 		id="booklist">
 		<div v-if="!selectedPublisher">
 			<h2 class="my-6 text-2xl font-bold text-center">
-				Chọn Nhà Xuất Bản
+				Chọn nhà phát hành
 			</h2>
 			<div
 				class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -41,10 +41,9 @@
 			</div>
 			<div
 				class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2 lg:grid-cols-5">
-				<NuxtLink
+				<div
 					v-for="book in books[selectedPublisher]"
 					:key="book.id"
-					:to="`${book.link}/edit`"
 					class="relative p-4 bg-white rounded shadow book-card">
 					<img
 						:src="book.cover"
@@ -54,11 +53,7 @@
 						{{ book.title }}
 					</h3>
 					<p class="text-gray-700">{{ book.author }}</p>
-					<div
-						class="absolute inset-0 flex items-center justify-center text-lg font-semibold text-white transition-opacity duration-300 bg-blue-500 bg-opacity-75 rounded opacity-0 hover:opacity-100">
-						Sửa thông tin sách
-					</div>
-				</NuxtLink>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -99,8 +94,5 @@
 	.book-card {
 		position: relative;
 		overflow: hidden;
-	}
-	.book-card:hover .hover-box {
-		opacity: 1;
 	}
 </style>
