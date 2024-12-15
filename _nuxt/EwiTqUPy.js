@@ -1,0 +1,1 @@
+import{B as c,P as s,C as a}from"./CFfkpcTq.js";import{k as p,A as o,e as _,i as e,c as m}from"./LFDqsYmP.js";const f={components:{Banner:c,PreferBook:s,Coop:a},layout:"default"};function l(u,d,i,k,B,b){const n=o("banner"),t=o("prefer-book"),r=o("coop");return m(),_("div",null,[e(n),e(t),e(r)])}const C=p(f,[["render",l]]);export{C as default};
