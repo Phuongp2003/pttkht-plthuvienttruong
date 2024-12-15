@@ -22,8 +22,12 @@
 		},
 		async created() {
 			try {
-				const response = await fetch('/data/bookUB.json');
-				this.books = await response.json();
+				const { data: bookData } = await useAsyncData('books', () =>
+					fetch('http://localhost:3000/data/bookUB.json').then(
+						(res) => res.json()
+					)
+				);
+				this.books = bookData;
 			} catch (error) {
 				console.error('Error fetching top books:', error);
 			}

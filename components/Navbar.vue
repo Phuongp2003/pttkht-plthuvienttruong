@@ -15,14 +15,34 @@
 					Sách
 				</RouterLink>
 				<RouterLink
-					to="/books"
-					class="text-gray-700 hover:text-blue-500">
+					to="/borrow"
+					class="text-gray-700 hover:text-blue-500"
+					v-if="user?.role === 'usr'">
 					Quán lý sách mượn
 				</RouterLink>
 				<RouterLink
 					to="/books"
-					class="text-gray-700 hover:text-blue-500">
+					class="text-gray-700 hover:text-blue-500"
+					v-if="user?.role === 'usr'">
 					Quán lý thẻ sinh viên
+				</RouterLink>
+				<RouterLink
+					to="/borrow-manage"
+					class="text-gray-700 hover:text-blue-500"
+					v-if="user?.role === 'lib'">
+					Quán lý mượn sách
+				</RouterLink>
+				<RouterLink
+					to="/books-import"
+					class="text-gray-700 hover:text-blue-500"
+					v-if="user?.role === 'lib'">
+					Quán lý nhập sách
+				</RouterLink>
+				<RouterLink
+					to="/books-manage"
+					class="text-gray-700 hover:text-blue-500"
+					v-if="user?.role === 'lib'">
+					Quản lý sách trong kho
 				</RouterLink>
 			</div>
 			<!-- Account Section -->

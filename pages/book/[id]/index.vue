@@ -22,7 +22,7 @@
 <script>
 	import { ref, onMounted } from 'vue';
 	import { useRoute } from 'vue-router';
-	import BookInfo from '~/components/BookInfo.vue';
+	import BookInfo from '~/components/EditBookInfo.vue';
 	import RefBooks from '~/components/RefBooks.vue';
 
 	export default {

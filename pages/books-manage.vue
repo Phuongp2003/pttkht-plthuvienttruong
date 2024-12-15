@@ -2,18 +2,20 @@
 	<div>
 		<h2 class="my-6 text-2xl font-bold text-center">Tìm sách</h2>
 		<BookSearch @filter="applyFilter" />
-		<BookList :books="filteredBooks" />
+		<BookListManage
+			:books="filteredBooks"
+			v-if="filteredBooks" />
 	</div>
 </template>
 
 <script>
 	import BookSearch from '~/components/BookSearch.vue';
-	import BookList from '~/components/BookList.vue';
+	import BookListManage from '~/components/BookListManage.vue';
 
 	export default {
 		components: {
 			BookSearch,
-			BookList,
+			BookListManage,
 		},
 		data() {
 			return {
@@ -36,7 +38,6 @@
 		},
 		methods: {
 			applyFilter(filter) {
-				// Implement filter logic here
 				this.filteredBooks = this.books.filter((book) => {
 					return (
 						book.title.includes(filter.searchQuery) &&

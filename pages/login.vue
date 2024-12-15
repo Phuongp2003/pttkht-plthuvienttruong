@@ -1,11 +1,11 @@
 <template>
 	<div
 		id="authorized"
-		class="w-full flex h-screen bg-indigo-700">
-		<div class="w-full max-w-xs m-auto bg-indigo-100 rounded p-5">
+		class="flex w-full h-screen bg-indigo-700">
+		<div class="w-full max-w-xs p-5 m-auto bg-indigo-100 rounded">
 			<header>
 				<h2
-					class="text-bold text-indigo-700 font-bold text-2xl text-center mb-4">
+					class="mb-4 text-2xl font-bold text-center text-indigo-700 text-bold">
 					Đăng nhập
 				</h2>
 			</header>
@@ -18,7 +18,7 @@
 					>
 					<input
 						type="text"
-						class="form-control w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"
+						class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none form-control focus:bg-gray-300"
 						id="username"
 						v-model="username"
 						required />
@@ -31,7 +31,7 @@
 					>
 					<input
 						type="password"
-						class="form-control w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"
+						class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none form-control focus:bg-gray-300"
 						id="password"
 						v-model="password"
 						required />
@@ -43,19 +43,19 @@
 				</div>
 				<button
 					type="submit"
-					class="w-full bg-indigo-700 hover:bg-pink-700 text-white font-bold py-2 px-4 mb-6 rounded">
+					class="w-full px-4 py-2 mb-6 font-bold text-white bg-indigo-700 rounded hover:bg-pink-700">
 					Đăng nhập
 				</button>
 			</form>
 			<footer>
 				<RouterLink
 					to="forgot-pass"
-					class="text-indigo-700 hover:text-pink-700 text-sm float-left">
+					class="float-left text-sm text-indigo-700 hover:text-pink-700">
 					Quên mật khẩu?
 				</RouterLink>
 				<RouterLink
 					to="signup"
-					class="text-indigo-700 hover:text-pink-700 text-sm float-right">
+					class="float-right text-sm text-indigo-700 hover:text-pink-700">
 					Đăng ký
 				</RouterLink>
 			</footer>
@@ -166,9 +166,10 @@
 				}
 			},
 			async loginDemo() {
-				this.username = 'demo';
 				this.password = 'demo';
-				await this.login();
+				const uRole = this.username == 'admin' ? 'lib' : 'usr';
+				this.username = 'demo';
+
 				if (this.username !== 'false') {
 					this.$router.push(this.target || '/');
 				}
@@ -179,6 +180,7 @@
 						username: 'demo',
 						name: `Demo user`,
 						avatar: 'https://res.cloudinary.com/drgzcrye6/image/upload/v1732819880/obhw6bw9twmkqvlng21y.jpg',
+						role: uRole,
 					};
 					this.cookies.set('accessToken', 'accessToken', {
 						path: '/',

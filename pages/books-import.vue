@@ -2,18 +2,18 @@
 	<div>
 		<h2 class="my-6 text-2xl font-bold text-center">Tìm sách</h2>
 		<BookSearch @filter="applyFilter" />
-		<BookList :books="filteredBooks" />
+		<ImportBookList :books="filteredBooks" />
 	</div>
 </template>
 
 <script>
 	import BookSearch from '~/components/BookSearch.vue';
-	import BookList from '~/components/BookList.vue';
+	import ImportBookList from '~/components/ImportBookList.vue';
 
 	export default {
 		components: {
 			BookSearch,
-			BookList,
+			ImportBookList,
 		},
 		data() {
 			return {
@@ -24,7 +24,7 @@
 		async created() {
 			try {
 				const { data: bookData } = await useAsyncData('books', () =>
-					fetch('http://localhost:3000/data/book.json').then((res) =>
+					fetch('http://localhost:3000/data/bookS.json').then((res) =>
 						res.json()
 					)
 				);
