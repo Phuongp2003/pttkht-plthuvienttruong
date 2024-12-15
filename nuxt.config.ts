@@ -15,4 +15,5 @@ export default defineNuxtConfig({
 			preload: ['python'],
 		},
 	},
+	nitro: { prerender: { failOnError: false } },
 });
