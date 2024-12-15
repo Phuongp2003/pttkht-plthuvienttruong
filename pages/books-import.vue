@@ -32,15 +32,15 @@
 					pending: loading,
 					error,
 				} = await useAsyncData('books', () =>
-					fetch('http://localhost:3000/data/bookS.json').then((res) =>
+					fetch('/data/bookS.json').then((res) =>
 						res.json()
 					)
 				);
+				this.loading = loading;
 				this.books = bookData;
 			} catch (error) {
 				console.error('Error fetching top books:', error);
 			}
-			this.loading = loading;
 			this.filteredBooks = this.books;
 		},
 		methods: {

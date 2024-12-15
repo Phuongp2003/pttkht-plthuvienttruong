@@ -34,7 +34,7 @@
 					pending: loading,
 					error,
 				} = await useAsyncData('books', () =>
-					fetch('http://localhost:3000/data/book.json').then((res) =>
+					fetch('/data/book.json').then((res) =>
 						res.json()
 					)
 				);

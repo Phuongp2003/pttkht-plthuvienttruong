@@ -1,11 +1,11 @@
 <template>
 	<div
 		id="authorized"
-		class="w-full flex h-screen bg-indigo-700">
-		<div class="w-full max-w-xl m-auto bg-indigo-100 rounded p-5">
+		class="flex w-full h-screen bg-indigo-700">
+		<div class="w-full max-w-xl p-5 m-auto bg-indigo-100 rounded">
 			<header>
 				<h2
-					class="text-bold text-indigo-700 font-bold text-2xl text-center mb-4">
+					class="mb-4 text-2xl font-bold text-center text-indigo-700 text-bold">
 					Đăng ký
 				</h2>
 			</header>
@@ -18,7 +18,7 @@
 					>
 					<input
 						type="text"
-						class="form-control w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"
+						class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none form-control focus:bg-gray-300"
 						id="lastname"
 						v-model="lastname"
 						required />
@@ -31,7 +31,7 @@
 					>
 					<input
 						type="text"
-						class="form-control w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"
+						class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none form-control focus:bg-gray-300"
 						id="firstname"
 						v-model="firstname"
 						required />
@@ -45,7 +45,7 @@
 					>
 					<input
 						type="text"
-						class="form-control w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"
+						class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none form-control focus:bg-gray-300"
 						id="nickname"
 						v-model="nickname"
 						required />
@@ -58,7 +58,7 @@
 					>
 					<input
 						type="email"
-						class="form-control w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"
+						class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none form-control focus:bg-gray-300"
 						id="email"
 						v-model="email"
 						required />
@@ -71,7 +71,7 @@
 					>
 					<input
 						type="text"
-						class="form-control w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"
+						class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none form-control focus:bg-gray-300"
 						id="username"
 						v-model="username"
 						required />
@@ -84,7 +84,7 @@
 					>
 					<input
 						type="password"
-						class="form-control w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"
+						class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none form-control focus:bg-gray-300"
 						id="password"
 						v-model="password"
 						required />
@@ -97,7 +97,7 @@
 					>
 					<input
 						type="password"
-						class="form-control w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"
+						class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none form-control focus:bg-gray-300"
 						id="rpassword"
 						v-model="rpassword"
 						required />
@@ -110,7 +110,7 @@
 					>
 					<input
 						type="file"
-						class="form-control w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"
+						class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none form-control focus:bg-gray-300"
 						id="avatar"
 						@change="previewAvatar"
 						accept="image/*" />
@@ -120,7 +120,7 @@
 						<img
 							:src="avatar"
 							alt="Avatar Preview"
-							class="w-32 h-32 object-cover rounded-full mx-auto" />
+							class="object-cover w-32 h-32 mx-auto rounded-full" />
 					</div>
 				</div>
 				<div
@@ -130,7 +130,7 @@
 				</div>
 				<button
 					type="submit"
-					class="w-full bg-indigo-700 hover:bg-pink-700 text-white font-bold py-2 px-4 mb-6 rounded">
+					class="w-full px-4 py-2 mb-6 font-bold text-white bg-indigo-700 rounded hover:bg-pink-700">
 					Đăng ký
 				</button>
 			</form>
@@ -138,7 +138,7 @@
 				<span class="text-sm">Đã có tài khoản?</span>
 				<RouterLink
 					to="/login"
-					class="text-indigo-700 hover:text-pink-700 text-sm">
+					class="text-sm text-indigo-700 hover:text-pink-700">
 					Đăng nhập
 				</RouterLink>
 			</footer>
@@ -219,17 +219,14 @@
 				};
 
 				try {
-					const response = await fetch(
-						`http://localhost:3000/api/auth/register`,
-						{
-							method: 'POST',
-							headers: {
-								'Content-Type': 'application/json',
-							},
-							body: JSON.stringify(signupInfo),
-							credentials: 'include',
-						}
-					);
+					const response = await fetch(`/api/auth/register`, {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json',
+						},
+						body: JSON.stringify(signupInfo),
+						credentials: 'include',
+					});
 					const data = await response.json();
 					this.inLoad = false;
 
