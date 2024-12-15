@@ -1,6 +1,6 @@
 <template>
 	<section class="container py-8 mx-auto prefer-book">
-		<h3 class="mb-6 text-2xl font-bold">Sách được mượn nhiều </h3>
+		<h3 class="mb-6 text-2xl font-bold">Sách được mượn nhiều</h3>
 		<Suspense>
 			<template #default>
 				<div
@@ -78,7 +78,7 @@
 		async mounted() {
 			try {
 				const response = await fetch('/data/book.json');
-				this.topBooks = await response.json();
+				this.topBooks = await response.json().slice(0, 10);
 			} catch (error) {
 				console.error('Error fetching top books:', error);
 			}
