@@ -69,7 +69,7 @@
 					class="absolute right-0 hidden w-48 mt-2 bg-white border rounded shadow-lg peer-checked:block">
 					<div v-if="user">
 						<RouterLink
-							to="/profile"
+							to="/borrow-history"
 							class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
 							@click="
 								document.getElementById(
@@ -89,7 +89,7 @@
 							>Lịch sử mượn</RouterLink
 						>
 						<RouterLink
-							to="/announcements"
+							to="/borrow-history"
 							class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
 							@click="
 								document.getElementById(
