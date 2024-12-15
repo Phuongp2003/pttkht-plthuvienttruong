@@ -2,9 +2,11 @@
 	<div class="sticky top-0 z-50 bg-white shadow-md navbar">
 		<div class="container flex items-center justify-between p-4 mx-auto">
 			<!-- Logo -->
-			<div class="flex items-center">
+			<NuxtLink
+				to="/"
+				class="flex items-center">
 				<Logo />
-			</div>
+			</NuxtLink>
 			<!-- Navigation Links -->
 			<div class="flex space-x-4">
 				<RouterLink

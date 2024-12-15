@@ -38,11 +38,13 @@
 						<img
 							:src="book.cover"
 							:alt="book.title"
-							class="object-cover w-full h-48 mb-4 rounded" />
-						<h3 class="mb-2 text-lg font-semibold">
-							{{ book.title }}
-						</h3>
-						<p class="text-gray-700">{{ book.author }}</p>
+							class="object-cover w-[50%] h-48 mb-4 mx-auto rounded" />
+						<div class="book-content w-[50%]">
+							<h3 class="px-5 mb-2 text-lg font-semibold">
+								{{ book.title }}
+							</h3>
+							<p class="px-5 text-gray-700">{{ book.author }}</p>
+						</div>
 						<RouterLink
 							class="absolute inset-0 flex items-center justify-center text-lg font-bold text-white transition-opacity duration-300 bg-blue-500 bg-opacity-75 opacity-0 borrow-overlay hover:opacity-100"
 							:to="book.link">
@@ -78,7 +80,9 @@
 		async mounted() {
 			try {
 				const response = await fetch('/data/book.json');
-				this.topBooks = await response.json().slice(0, 10);
+				this.topBooks = await response
+					.json()
+					.then((data) => data.slice(0, 10));
 			} catch (error) {
 				console.error('Error fetching top books:', error);
 			}

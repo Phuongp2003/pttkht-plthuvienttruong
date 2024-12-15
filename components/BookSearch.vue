@@ -1,5 +1,6 @@
 <template>
-	<div class="container p-4 mx-auto bg-white rounded shadow search-bar">
+	<div
+		class="container p-4 mx-auto bg-white rounded shadow-sm shadow-neutral-600 search-bar">
 		<div class="flex items-center space-x-4">
 			<input
 				type="text"
