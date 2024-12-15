@@ -8,7 +8,9 @@
         "link": "/book/1",
         "summary": "Summary of Book Title 1",
         "amount": 10,
-        "available": 7
+        "available": 7,
+        "publisher": "Publisher 1",
+        "date": "2023-01-01"
     },
     {
         "id": 2,
@@ -19,7 +21,9 @@
         "link": "/book/2",
         "summary": "Summary of Book Title 2",
         "amount": 8,
-        "available": 5
+        "available": 5,
+        "publisher": "Publisher 2",
+        "date": "2023-02-01"
     },
     {
         "id": 3,
@@ -30,7 +34,9 @@
         "link": "/book/3",
         "summary": "Summary of Book Title 3",
         "amount": 12,
-        "available": 10
+        "available": 10,
+        "publisher": "Publisher 3",
+        "date": "2023-03-01"
     },
     {
         "id": 4,
@@ -41,7 +47,9 @@
         "link": "/book/4",
         "summary": "Summary of Book Title 4",
         "amount": 15,
-        "available": 12
+        "available": 12,
+        "publisher": "Publisher 2",
+        "date": "2023-04-01"
     },
     {
         "id": 5,
@@ -52,7 +60,9 @@
         "link": "/book/5",
         "summary": "Summary of Book Title 5",
         "amount": 7,
-        "available": 3
+        "available": 3,
+        "publisher": "Publisher 3",
+        "date": "2023-05-01"
     },
     {
         "id": 6,
@@ -63,7 +73,9 @@
         "link": "/book/6",
         "summary": "Summary of Book Title 6",
         "amount": 9,
-        "available": 6
+        "available": 6,
+        "publisher": "Publisher 1",
+        "date": "2023-06-01"
     },
     {
         "id": 7,
@@ -74,7 +86,9 @@
         "link": "/book/7",
         "summary": "Summary of Book Title 7",
         "amount": 11,
-        "available": 9
+        "available": 9,
+        "publisher": "Publisher 2",
+        "date": "2023-07-01"
     },
     {
         "id": 8,
@@ -85,7 +99,9 @@
         "link": "/book/8",
         "summary": "Summary of Book Title 8",
         "amount": 13,
-        "available": 11
+        "available": 11,
+        "publisher": "Publisher 2",
+        "date": "2023-08-01"
     },
     {
         "id": 9,
@@ -96,7 +112,9 @@
         "link": "/book/9",
         "summary": "Summary of Book Title 9",
         "amount": 14,
-        "available": 10
+        "available": 10,
+        "publisher": "Publisher 3",
+        "date": "2023-09-01"
     },
     {
         "id": 10,
@@ -107,6 +125,346 @@
         "link": "/book/10",
         "summary": "Summary of Book Title 10",
         "amount": 10,
-        "available": 8
+        "available": 8,
+        "publisher": "Publisher 1",
+        "date": "2023-10-01"
+    },
+    {
+        "id": 11,
+        "title": "Book Title 11",
+        "author": "Author 11",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 11",
+        "link": "/book/11",
+        "summary": "Summary of Book Title 11",
+        "amount": 10,
+        "available": 7,
+        "publisher": "Publisher 1",
+        "date": "2023-01-01"
+    },
+    {
+        "id": 12,
+        "title": "Book Title 12",
+        "author": "Author 12",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 12",
+        "link": "/book/12",
+        "summary": "Summary of Book Title 12",
+        "amount": 8,
+        "available": 5,
+        "publisher": "Publisher 2",
+        "date": "2023-02-01"
+    },
+    {
+        "id": 13,
+        "title": "Book Title 13",
+        "author": "Author 13",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 13",
+        "link": "/book/13",
+        "summary": "Summary of Book Title 13",
+        "amount": 12,
+        "available": 10,
+        "publisher": "Publisher 3",
+        "date": "2023-03-01"
+    },
+    {
+        "id": 14,
+        "title": "Book Title 14",
+        "author": "Author 14",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 14",
+        "link": "/book/14",
+        "summary": "Summary of Book Title 14",
+        "amount": 15,
+        "available": 12,
+        "publisher": "Publisher 2",
+        "date": "2023-04-01"
+    },
+    {
+        "id": 15,
+        "title": "Book Title 15",
+        "author": "Author 15",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 15",
+        "link": "/book/15",
+        "summary": "Summary of Book Title 15",
+        "amount": 7,
+        "available": 3,
+        "publisher": "Publisher 3",
+        "date": "2023-05-01"
+    },
+    {
+        "id": 16,
+        "title": "Book Title 16",
+        "author": "Author 16",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 16",
+        "link": "/book/16",
+        "summary": "Summary of Book Title 16",
+        "amount": 9,
+        "available": 6,
+        "publisher": "Publisher 1",
+        "date": "2023-06-01"
+    },
+    {
+        "id": 17,
+        "title": "Book Title 17",
+        "author": "Author 17",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 17",
+        "link": "/book/17",
+        "summary": "Summary of Book Title 17",
+        "amount": 11,
+        "available": 9,
+        "publisher": "Publisher 2",
+        "date": "2023-07-01"
+    },
+    {
+        "id": 18,
+        "title": "Book Title 18",
+        "author": "Author 18",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 18",
+        "link": "/book/18",
+        "summary": "Summary of Book Title 18",
+        "amount": 13,
+        "available": 11,
+        "publisher": "Publisher 2",
+        "date": "2023-08-01"
+    },
+    {
+        "id": 19,
+        "title": "Book Title 19",
+        "author": "Author 19",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 19",
+        "link": "/book/19",
+        "summary": "Summary of Book Title 19",
+        "amount": 14,
+        "available": 10,
+        "publisher": "Publisher 3",
+        "date": "2023-09-01"
+    },
+    {
+        "id": 20,
+        "title": "Book Title 20",
+        "author": "Author 20",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 20",
+        "link": "/book/20",
+        "summary": "Summary of Book Title 20",
+        "amount": 10,
+        "available": 8,
+        "publisher": "Publisher 1",
+        "date": "2023-10-01"
+    },
+    {
+        "id": 21,
+        "title": "Book Title 21",
+        "author": "Author 21",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 21",
+        "link": "/book/21",
+        "summary": "Summary of Book Title 21",
+        "amount": 10,
+        "available": 7,
+        "publisher": "Publisher 1",
+        "date": "2023-01-01"
+    },
+    {
+        "id": 22,
+        "title": "Book Title 22",
+        "author": "Author 22",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 22",
+        "link": "/book/22",
+        "summary": "Summary of Book Title 22",
+        "amount": 8,
+        "available": 5,
+        "publisher": "Publisher 2",
+        "date": "2023-02-01"
+    },
+    {
+        "id": 23,
+        "title": "Book Title 23",
+        "author": "Author 23",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 23",
+        "link": "/book/23",
+        "summary": "Summary of Book Title 23",
+        "amount": 12,
+        "available": 10,
+        "publisher": "Publisher 3",
+        "date": "2023-03-01"
+    },
+    {
+        "id": 24,
+        "title": "Book Title 24",
+        "author": "Author 24",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 24",
+        "link": "/book/24",
+        "summary": "Summary of Book Title 24",
+        "amount": 15,
+        "available": 12,
+        "publisher": "Publisher 2",
+        "date": "2023-04-01"
+    },
+    {
+        "id": 25,
+        "title": "Book Title 25",
+        "author": "Author 25",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 25",
+        "link": "/book/25",
+        "summary": "Summary of Book Title 25",
+        "amount": 7,
+        "available": 3,
+        "publisher": "Publisher 3",
+        "date": "2023-05-01"
+    },
+    {
+        "id": 26,
+        "title": "Book Title 26",
+        "author": "Author 26",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 26",
+        "link": "/book/26",
+        "summary": "Summary of Book Title 26",
+        "amount": 9,
+        "available": 6,
+        "publisher": "Publisher 1",
+        "date": "2023-06-01"
+    },
+    {
+        "id": 27,
+        "title": "Book Title 27",
+        "author": "Author 27",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 27",
+        "link": "/book/27",
+        "summary": "Summary of Book Title 27",
+        "amount": 11,
+        "available": 9,
+        "publisher": "Publisher 2",
+        "date": "2023-07-01"
+    },
+    {
+        "id": 28,
+        "title": "Book Title 28",
+        "author": "Author 28",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 28",
+        "link": "/book/28",
+        "summary": "Summary of Book Title 28",
+        "amount": 13,
+        "available": 11,
+        "publisher": "Publisher 2",
+        "date": "2023-08-01"
+    },
+    {
+        "id": 29,
+        "title": "Book Title 29",
+        "author": "Author 29",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 29",
+        "link": "/book/29",
+        "summary": "Summary of Book Title 29",
+        "amount": 14,
+        "available": 10,
+        "publisher": "Publisher 3",
+        "date": "2023-09-01"
+    },
+    {
+        "id": 30,
+        "title": "Book Title 30",
+        "author": "Author 30",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 30",
+        "link": "/book/30",
+        "summary": "Summary of Book Title 30",
+        "amount": 10,
+        "available": 8,
+        "publisher": "Publisher 1",
+        "date": "2023-10-01"
+    },
+    {
+        "id": 31,
+        "title": "Book Title 31",
+        "author": "Author 31",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 31",
+        "link": "/book/31",
+        "summary": "Summary of Book Title 31",
+        "amount": 10,
+        "available": 7,
+        "publisher": "Publisher 1",
+        "date": "2023-01-01"
+    },
+    {
+        "id": 32,
+        "title": "Book Title 32",
+        "author": "Author 32",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 32",
+        "link": "/book/32",
+        "summary": "Summary of Book Title 32",
+        "amount": 8,
+        "available": 5,
+        "publisher": "Publisher 2",
+        "date": "2023-02-01"
+    },
+    {
+        "id": 33,
+        "title": "Book Title 33",
+        "author": "Author 33",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 33",
+        "link": "/book/33",
+        "summary": "Summary of Book Title 33",
+        "amount": 12,
+        "available": 10,
+        "publisher": "Publisher 3",
+        "date": "2023-03-01"
+    },
+    {
+        "id": 34,
+        "title": "Book Title 34",
+        "author": "Author 34",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 34",
+        "link": "/book/34",
+        "summary": "Summary of Book Title 34",
+        "amount": 15,
+        "available": 12,
+        "publisher": "Publisher 2",
+        "date": "2023-04-01"
+    },
+    {
+        "id": 35,
+        "title": "Book Title 35",
+        "author": "Author 35",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 35",
+        "link": "/book/35",
+        "summary": "Summary of Book Title 35",
+        "amount": 7,
+        "available": 3,
+        "publisher": "Publisher 3",
+        "date": "2023-05-01"
+    },
+    {
+        "id": 36,
+        "title": "Book Title 36",
+        "author": "Author 36",
+        "cover": "https://via.placeholder.com/600x450",
+        "description": "Description of Book Title 36",
+        "link": "/book/36",
+        "summary": "Summary of Book Title 36",
+        "amount": 9,
+        "available": 6,
+        "publisher": "Publisher 1",
+        "date": "2023-06-01"
     }
 ]
